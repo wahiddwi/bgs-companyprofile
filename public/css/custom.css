@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", sans-serif;
+    scroll-behavior: smooth;
+    /* overflow-x: hidden; */
+}
+body {
+    background-color: white;
+}
+.btn {
+    border-radius: 50px;
+    padding: 10px 80px;
+}
+.navbar {
+    padding: 0 122px;
+}
+.nav-item {
+    font-size: 16px;
+    margin-right: 20px;
+    font-weight: 500;
+}
+.hero {
+    margin-top: 10px;
+    margin-left: 30px;
+    padding: 0 122px;
+}
+.hero .btn {
+    margin-top: 10px;
+}
+.hero h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+.hero p {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #919191;
+}
+.hero .isi {
+    margin-top: 127px;
+}
+.hero .heroimg {
+    position: relative;
+}
+.hero img {
+    margin-top: 71px;
+    max-height: 422px;
+    margin-left: 222px;
+}
+.hero .produkimg {
+    max-height: 380px;
+}
+.mid {
+    text-align: center;
+    margin-top: 181px;
+    background-color: #3183ff;
+    color: white;
+}
+.mid .card {
+    text-align: center;
+    justify-content: center;
+    border: none;
+    background-color: #3183ff;
+    margin-top: 97px;
+    margin-left: 32px;
+    margin-right: 32px;
+    border-radius: 20px !important;
+    margin-bottom: 178px;
+    /* cursor: pointer; */
+}
+.mid .card:hover {
+    box-shadow: 0px 11px 19px rgba(0, 0, 0, 0.22);
+}
+.mid .card-img-top {
+    margin-top: 51px;
+}
+.mid .card-body {
+    margin-top: 41px;
+}
+.mid h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+    padding-top: 143px;
+}
+.sistem {
+    margin-top: 200px;
+    display: inline-block;
+    margin-bottom: 250px;
+}
+.sistem img {
+    margin-left: 122px;
+}
+.sistem .isi {
+    margin-left: 748px;
+    /* margin-top: -400px; */
+    position: relative;
+}
+.sistem h1 {
+    margin-top: -400px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 47px;
+}
+.sistem p {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #919191;
+}
+footer {
+    margin-top: 150px;
+    background-color: #3183ff;
+    color: white;
+}
+@media (max-width: 767px) {
+    .navbar {
+        padding: 0 20px;
+    }
+    .mid br {
+        display: none;
+    }
+    .hero {
+        margin: 0;
+        padding: 0 80px;
+    }
+    .hero br {
+        display: none;
+    }
+    .hero .isi {
+        display: inline-block;
+        text-align: center;
+        justify-content: center;
+        margin-top: 320px;
+    }
+    .hero .heroimg {
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 211px;
+        margin-top: -520px;
+        margin-bottom: 20px;
+    }
+    .hero .produkimg {
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 211px;
+        margin-top: -520px;
+    }
+    .hero .isi h1 {
+        font-size: 34px;
+    }
+    .hero .isi p {
+        display: block;
+        font-size: 16px;
+    }
+    .sistem {
+        margin-top: 70px;
+        margin-bottom: 80px;
+    }
+    .sistem img {
+        text-align: center;
+        max-height: 211px;
+        margin-left: 150px;
+    }
+    .sistem h1 {
+        font-size: 34px;
+        margin-top: 50px;
+    }
+    .sistem p {
+        font-size: 16px;
+    }
+    .sistem .isi {
+        text-align: center;
+        margin-left: 0;
+        padding: 0 20px;
+        /* margin-top: 200px; */
+    }
+    .sistem .isi br {
+        display: none;
+    }
+}
