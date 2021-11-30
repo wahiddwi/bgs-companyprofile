@@ -72,6 +72,7 @@ body {
 }
 .mid .card:hover {
     box-shadow: 0px 11px 19px rgba(0, 0, 0, 0.22);
+    transform: scale(1.05);
 }
 .mid .card-img-top {
     margin-top: 51px;
@@ -114,6 +115,37 @@ footer {
     margin-top: 150px;
     background-color: #3183ff;
     color: white;
+    bottom: 0;
+    list-style: none;
+}
+footer .isi {
+    padding-top: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+footer .logo p {
+    margin-top: 20px;
+}
+footer .copyright {
+    text-align: center;
+    margin-bottom: -10px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+footer .nav-link {
+    font-size: 14px;
+    color: white;
+}
+footer .map p {
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 15px;
+}
+footer .nav-item {
+    margin-left: -15px;
+}
+.tentangkami {
+    margin-top: -100px;
 }
 @media (max-width: 767px) {
     .navbar {
@@ -179,5 +211,12 @@ footer {
     }
     .sistem .isi br {
         display: none;
+    }
+    footer .navigate {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .tentangkami {
+        margin-top: 0;
     }
 }

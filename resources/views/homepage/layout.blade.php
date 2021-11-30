@@ -53,29 +53,33 @@
     @section('content')
     @show
     <footer>
-        <hr>
-        <br>
-            <div class="container">
+            <div class="isi">
                 <div class="row">
                     <div class="logo col-12 col-md-4">
                         <img src="{{ asset('assets/logo.png') }}"alt="" style="width: 130px;">
-                        <p>Kepada konsumen untuk meningkatkan kenyamanan dan kepercayaan konsumen</p>
+                        <p>Kepada konsumen untuk meningkatkan<br>kenyamanan dan kepercayaan konsumen</p>
                     </div>
                     <div class="navigate col-12 col-md-4">
                         <h4>Hubungi Kami</h4>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-phone"></i> 02131180063</a>
+                            <a class="nav-link map" href=""><i class="fa fa-map-marker"></i><p> South Quarter Tower A, Unit D-G
+                                Jl. RA Kartini Kav. 8, Cilandak Barat
+                                Jakarta Selatan, 12430</p></a>
+                        </li>
+                        <br>
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa fa-phone"></i>  +62 21 311 80060</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa fa-envelope"></i>globaljayautama.gju@gmail.com</a>
+                            <a class="nav-link" href=""><i class="fa fa-envelope"></i>  buanasuksesgemilang.bsg@gmail.com</a>
                         </li>
                     </div>
-                    <div class="navigate col-12 col-md-4">
+                    <div class="lokasi col-12 col-md-4">
                         <h4>Lokasi</h4>
                     </div>
                 </div>
             </div>
-            <p class="copyright">© 2021 Global Jaya Utama. All rights reserved</p>
+            <p class="copyright">© 2021 Buana Gemilang Sukses. All rights reserved</p>
     </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 

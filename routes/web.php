@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('homepage.home');
 });
+Route::view('tentangkami', 'homepage.tentangkami');
+Route::view('layanan', 'homepage.layanan');
+Route::view('kontak', 'homepage.kontak');
