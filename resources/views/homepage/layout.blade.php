@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title')</title>
+    <title>Buana Gemilang Sukses</title>
     <!-- Scripts -->
     <script src="https://use.fontawesome.com/fce448f006.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>

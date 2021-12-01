@@ -87,9 +87,9 @@ body {
     padding-top: 143px;
 }
 .sistem {
-    margin-top: 200px;
+    margin-top: 150px;
     display: inline-block;
-    margin-bottom: 250px;
+    margin-bottom: 300px;
 }
 .sistem img {
     margin-left: 122px;
@@ -146,6 +146,86 @@ footer .nav-item {
 }
 .tentangkami {
     margin-top: -100px;
+}
+.visi .isi h1 {
+    font-weight: 700;
+    font-size: 48px;
+}
+.visi .isi {
+    margin-left: 50px;
+}
+.visi .isi p {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: 300;
+    color: white;
+}
+.visi .frame {
+    position: relative;
+    max-height: 350px;
+    margin-left: 800px;
+    margin-top: -500px;
+    filter: drop-shadow(0px 11px 19px rgba(0, 0, 0, 0.22));
+}
+.visi .frame:hover {
+    transform: scale(1.05);
+}
+.visi {
+    background-color: #3183ff;
+    color: white;
+    border-radius: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.layanan .card-body h4 {
+    font-weight: 700;
+    /* color: #3fa1bb; */
+}
+.layanan .card-img-top {
+    height: 230px;
+    border-radius: 30px;
+}
+.layanan .card {
+    border-radius: 30px;
+    margin: 10px 0;
+}
+.layanan .card:hover {
+    box-shadow: 0px 5px 19px rgba(63, 161, 187, 0.19);
+    transform: scale(1.05);
+}
+.layanan .card-group {
+    margin-top: 250px;
+    padding: 0 100px;
+}
+.kontak {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.kontak h4 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #3183ff;
+}
+.kontak hr {
+    background-color: #929292;
+    height: 1px;
+    width: 50%;
+}
+.kontak label {
+    color: #929292;
+}
+.kontakkami {
+    margin-bottom: 120px;
+    margin-top: 50px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0px 5px 19px rgba(63, 161, 187, 0.19);
+}
+.img-kontak {
+    margin-top: 90px;
 }
 @media (max-width: 767px) {
     .navbar {
@@ -218,5 +298,15 @@ footer .nav-item {
     }
     .tentangkami {
         margin-top: 0;
+    }
+    .layanan .card-group {
+        margin-top: 70px;
+        padding: 0 50px;
+    }
+    .kontak input {
+        width: 400px !important;
+    }
+    .kontak textarea {
+        width: 400px !important;
     }
 }

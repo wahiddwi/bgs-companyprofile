@@ -67,7 +67,7 @@
                     manajemen, proses
                     perencanaan dan
                     pengorganisasian.</p>
-                <a href="" class="btn btn-primary">Tentang Kami</a>
+                <a href="/tentangkami" class="btn btn-primary">Tentang Kami</a>
             </div>
     </div>
 

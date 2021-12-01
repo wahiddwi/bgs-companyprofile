@@ -15,16 +15,17 @@
                 manajemen, proses
                 perencanaan dan
                 pengorganisasian.</p>
-            <a href="" class="btn btn-primary">Visi Misi</a>
+            <a href="#visi" class="btn btn-primary">Visi Misi</a>
         </div>
     </div>
 
-    <div class="visi">
+    <div class="visi" id="visi">
         <div class="isi col-md-6">
             <h1>Visi</h1>
-            <p>Menjadikan perusahaan konstruksi terbaik di Indonesia dan menjadi mitra terpercaya yang profesional, kompeten dan berintegritas dalam membangun kualitas kerja perusahaan serta berkesinambungan dengan prinsip Good Corporate Governance.</p>
+            <p>Menjadi Perusahaan Terpercaya yang Professional dan Bermanfaat untuk Memenuhi Kebutuhan Masyarakat serta Mempunyai Aksesdan Jaringan Penjualan yang Luas.</p>
+            <br>
             <h1>Misi</h1>
-            <p>1. Membangun budaya kerja yang sehat, transparan, akuntabilitas, dan bertanggung jawab<br>2. Menghasilkan produk yang berkualitas dan ergonomis<br>3. Membangun hubungan kerja yang positif, kondusif dan harmonisuntuk mencapai tujuan bersama<br>4. Terus berkomitmen untuk berkembang serta mengikuti danmenerapkan teknologi terkini..</p>
+            <p>1. Melakukan Penjualan yang Terstruktur<br>2. Memberikan Pelayanan Terbaik untuk Membangun Kemitraan dengan Stakeholder Perusahaan<br>3. Melakukan Transaksi Perdagangan Terstruktur demi Kepuasan Konsumen<br>4. Membangun Bisnis dan Aset Produktif Integratif Untuk Manfaat & Pelayanan Luas di Masyarakat, Bangsa, dan Negara</p>
         </div>   
         <div class="col-md-6">
             <img class="frame" src="{{ asset('assets/logo.png') }}" alt="">
