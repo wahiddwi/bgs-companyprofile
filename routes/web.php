@@ -13,10 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage.home');
-});
-
+Route::get('/', 'DashboardController@index')->name('user.dashboard');
 Route::get('tentangkami', 'TentangKamiController@index')->name('user.tentangkami');
 Route::get('layanan', 'LayananController@index')->name('user.layanan');
 Route::get('kontak', 'ContactController@index')->name('user.kontak');
