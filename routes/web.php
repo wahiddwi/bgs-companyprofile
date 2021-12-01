@@ -17,3 +17,13 @@ Route::get('/', 'DashboardController@index')->name('user.dashboard');
 Route::get('tentangkami', 'TentangKamiController@index')->name('user.tentangkami');
 Route::get('layanan', 'LayananController@index')->name('user.layanan');
 Route::get('kontak', 'ContactController@index')->name('user.kontak');
+
+//Admin
+
+Route::prefix('admin')
+    ->namespace('Admin')
+    ->group(function(){
+        Route::resource('layanan', 'LayananController', [
+            'as' => 'admin'
+        ]);
+    });
