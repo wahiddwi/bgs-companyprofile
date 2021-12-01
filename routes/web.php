@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('homepage.home');
 });
-Route::view('tentangkami', 'homepage.tentangkami');
-Route::view('layanan', 'homepage.layanan');
-Route::view('kontak', 'homepage.kontak');
+
+Route::get('tentangkami', 'TentangKamiController@index')->name('user.tentangkami');
+Route::get('layanan', 'LayananController@index')->name('user.layanan');
+Route::get('kontak', 'ContactController@index')->name('user.kontak');

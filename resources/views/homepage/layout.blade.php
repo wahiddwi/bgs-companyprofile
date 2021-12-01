@@ -35,13 +35,13 @@
                         <a class="nav-link {{(request()->is('/*')) ? 'active' : ""}}" aria-current="page" href="/">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{(request()->is('tentangkami*')) ? 'active' : ""}}" href="/tentangkami">Tentang Kami</a>
+                        <a class="nav-link {{(request()->is('tentangkami*')) ? 'active' : ""}}" href="{{ route('user.tentangkami') }}">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{(request()->is('layanan*')) ? 'active' : ""}}" href="/layanan">Layanan</a>
+                        <a class="nav-link {{(request()->is('layanan*')) ? 'active' : ""}}" href="{{ route('user.layanan') }}">Layanan</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{(request()->is('kontak*')) ? 'active' : ""}}" href="/kontak">Kontak</a>
+                        <a class="nav-link {{(request()->is('kontak*')) ? 'active' : ""}}" href="{{ route('user.kontak') }}">Kontak</a>
                     </li>
                 </ul>
             </div>
