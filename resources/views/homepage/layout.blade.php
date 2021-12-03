@@ -21,6 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 
+
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-expand-lg navbar-light bg-white" style="">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
@@ -57,6 +58,8 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin="">
         </script>
+
+        @stack('page-style')
 
 </head>
 
@@ -100,16 +103,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{ asset('js/myjs.js') }}"></script>
 
+@stack('after-scripts')
     <script>
         var mymap = L.map('mapid').setView([-6.205154154013863, 106.84186463929707], 11);
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                     // maxZoom: 11,
-                attribution: '<a href="{{ route('user.dashboard') }}">Buana Sukses Gemilang &copy;</a> contributors ' +
+                    @foreach($lokasi as $item)
+                attribution: '<a href=" http://maps.google.co.uk/maps?q={{$item->latitude}},{{ $item->longitude }}" target="_blank">Buana Sukses Gemilang &copy;</a> contributors ' +
                   '',
                 id: 'mapbox/streets-v11',
                 // tileSize: 512,
                 // zoomOffset: -1
               }).addTo(mymap);
+              @endforeach
                   //marker posisi awal
         //   L.marker([-6.1382687, 106.7428817]).addTo(mymap);
         // var icon = L.icon({
