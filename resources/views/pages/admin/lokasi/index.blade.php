@@ -4,6 +4,7 @@
 @push('page-styles')
 
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
 @endpush
 
@@ -15,7 +16,7 @@
         </div>
         <br>
 
-        @if (session('message'))
+        {{-- @if (session('message'))
             <div class="alert alert-success alert-dismissible show-fade">
                 <div class="alert-body">
                     <button class="close" data-dismiss="alert">
@@ -24,7 +25,7 @@
                     {{session('message')}}
                 </div>
             </div>
-        @endif
+        @endif --}}
 
         {{-- <div class="card"> --}}
             <div class="card-body">
@@ -77,6 +78,12 @@
 @push('after-scripts')
 
 <script src="//cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+@if (Session::has('message'))
+    <script>
+        toastr.success("{!!Session::get('message')!!}");
+    </script>
+@endif
 
 <script>
     $(document).ready( function () {

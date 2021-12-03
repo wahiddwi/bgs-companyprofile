@@ -139,6 +139,6 @@ class LokasiController extends Controller
     {
         Lokasi::where('id', $id)->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Data Berhasil Dihapus');
     }
 }
