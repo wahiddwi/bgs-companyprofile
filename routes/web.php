@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::resource('kontak', 'KontakController', [
 
 Route::prefix('admin')
     ->namespace('Admin')
+    ->middleware(['auth'])
     ->group(function(){
         Route::resource('layanan', 'LayananController', [
             'as' => 'admin'
@@ -35,3 +37,7 @@ Route::prefix('admin')
             'as' => 'admin'
         ]);
     });
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
