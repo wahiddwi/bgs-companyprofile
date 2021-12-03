@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Lokasi;
 use Illuminate\Http\Request;
 
 class LokasiController extends Controller
@@ -14,7 +15,8 @@ class LokasiController extends Controller
      */
     public function index()
     {
-        //
+        $lokasi = Lokasi::all();
+        return view('pages.admin.lokasi.index', compact('lokasi'));
     }
 
     /**
@@ -24,7 +26,7 @@ class LokasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.lokasi.create');
     }
 
     /**
@@ -35,7 +37,34 @@ class LokasiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required',
+            'no_telpon' => 'required',
+            'email' => 'required|email'
+        ], [
+            'nama.required' => 'Nama tidak boleh kosong',
+            'alamat.required' => 'Alamat tidak boleh kosong',
+            'latitude.required' => 'Geser marker ke posisi yang lokasi anda',
+            'longitude.required' => 'Geser marker ke posisi yang lokasi anda',
+            'no_telpon.required' => 'No telpon tidak boleh kosong',
+            'email.required' => 'Email tidak boleh kosong',
+            'email.email' => 'Masukkan email yang benar'
+        ]);
+
+        $lokasi = new Lokasi();
+        $lokasi->nama = $request->nama;
+        $lokasi->alamat = $request->alamat;
+        $lokasi->latitude = $request->latitude;
+        $lokasi->longitude = $request->longitude;
+        $lokasi->no_telpon = $request->no_telpon;
+        $lokasi->email = $request->email;
+
+        $lokasi->save();
+
+        return redirect()->route('admin.lokasi.index')->with('message', 'Data Berhasil Disimpan');
     }
 
     /**
@@ -57,7 +86,8 @@ class LokasiController extends Controller
      */
     public function edit($id)
     {
-        //
+        $lokasi = Lokasi::findOrFail($id);
+        return view('pages.admin.lokasi.edit', compact('lokasi'));
     }
 
     /**
@@ -69,7 +99,34 @@ class LokasiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required',
+            'no_telpon' => 'required',
+            'email' => 'required|email'
+        ], [
+            'nama.required' => 'Nama tidak boleh kosong',
+            'alamat.required' => 'Alamat tidak boleh kosong',
+            'latitude.required' => 'Geser marker ke posisi yang lokasi anda',
+            'longitude.required' => 'Geser marker ke posisi yang lokasi anda',
+            'no_telpon.required' => 'No telpon tidak boleh kosong',
+            'email.required' => 'Email tidak boleh kosong',
+            'email.email' => 'Masukkan email yang benar'
+        ]);
+
+        $lokasi = Lokasi::findOrFail($id);
+        $lokasi->nama = $request->nama;
+        $lokasi->alamat = $request->alamat;
+        $lokasi->latitude = $request->latitude;
+        $lokasi->longitude = $request->longitude;
+        $lokasi->no_telpon = $request->no_telpon;
+        $lokasi->email = $request->email;
+
+        $lokasi->update();
+
+        return redirect()->route('admin.lokasi.index')->with('message', 'Data Berhasil Diubah');
     }
 
     /**
@@ -80,6 +137,8 @@ class LokasiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Lokasi::where('id', $id)->delete();
+
+        return redirect()->back();
     }
 }

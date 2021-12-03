@@ -27,7 +27,8 @@ class LayananController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.layanan.create');
+        $layanan = Layanan::all();
+        return view('pages.admin.layanan.create', compact('layanan'));
     }
 
     /**
@@ -50,6 +51,8 @@ class LayananController extends Controller
         );
 
         $layanan->save();
+
+        // dd($layanan);
 
         return redirect()->route('admin.layanan.index')->with('message', 'Data Berhasil Disimpan');
     }

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Kontak;
+use App\Lokasi;
 use Illuminate\Http\Request;
 
 class KontakController extends Controller
@@ -15,8 +15,7 @@ class KontakController extends Controller
      */
     public function index()
     {
-        $kontak = Kontak::all();
-        return view('pages.admin.kontak.index', compact('kontak'));
+        //
     }
 
     /**
@@ -26,7 +25,9 @@ class KontakController extends Controller
      */
     public function create()
     {
-        //
+        $kontak = Kontak::all();
+        $lokasi = Lokasi::all();
+        return view('homepage.kontak', compact('kontak', 'lokasi'));
     }
 
     /**
@@ -37,7 +38,19 @@ class KontakController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'email' => 'required|email',
+            'message' => 'required'
+        ],[
+            'email.required' => 'Email tidak boleh kosong',
+            'email.email' => 'Masukkan email yang benar',
+            'message.required' => 'Pesan tidak boleh kosong',
+        ]);
+
+        $data = $request->all();
+        Kontak::create($data);
+        // dd($data);
+        return redirect()->back()->with('message', 'Terima kasih atas tanggapan yang anda kirimkan');
     }
 
     /**
@@ -82,9 +95,6 @@ class KontakController extends Controller
      */
     public function destroy($id)
     {
-        $kontak = Kontak::findOrFail($id);
-        $kontak->delete();
-
-        return redirect()->back()->with('message', 'Pesan Berhasil Dihapus');
+        //
     }
 }
