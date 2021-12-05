@@ -109,7 +109,7 @@
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
                     // maxZoom: 11,
                     @foreach($lokasi as $item)
-                attribution: '<a href=" http://maps.google.co.uk/maps?q={{$item->latitude}},{{ $item->longitude }}" target="_blank">Buana Sukses Gemilang &copy;</a> contributors ' +
+                attribution: '<a href="http://maps.google.co.uk/maps?q={{$item->latitude}},{{ $item->longitude }}" target="_blank">Buana Sukses Gemilang &copy;</a> contributors ' +
                   '',
                 id: 'mapbox/streets-v11',
                 // tileSize: 512,
