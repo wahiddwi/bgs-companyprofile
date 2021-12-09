@@ -73,21 +73,33 @@
                         <img src="{{ asset('assets/logo.png') }}"alt="" style="width: 130px;">
                         <p>Kepada konsumen untuk meningkatkan<br>kenyamanan dan kepercayaan konsumen</p>
                     </div>
+                    @foreach ($lokasi as $item)
+                        
                     <div class="navigate col-12 col-md-4">
                         <h4>Hubungi Kami</h4>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link map" href=""><i class="fa fa-map-marker"></i><p> South Quarter Tower A, Unit D-G
                                 Jl. RA Kartini Kav. 8, Cilandak Barat
                                 Jakarta Selatan, 12430</p></a>
+                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link map" href=""><i class="fa fa-map-marker"></i><p>{{ $item->alamat }}</p></a>
                         </li>
                         <br>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href=""><i class="fa fa-phone"></i>  +62 21 311 80060</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa fa-phone"></i>  {{$item->no_telpon}}</a>
+                        </li>
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href=""><i class="fa fa-envelope"></i>  buanasuksesgemilang.bsg@gmail.com</a>
+                        </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><i class="fa fa-envelope"></i> {{ $item->email }} </a>
                         </li>
                     </div>
+                    @endforeach
                     <div class="lokasi col-12 col-md-4">
                         <h4>Lokasi</h4>
                         <div id="mapid" style="height: 200px;"></div>
