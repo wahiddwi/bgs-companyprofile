@@ -140,7 +140,7 @@
     // var info = '<table><thead><tr><th colspan="2" class="text-center">{{$data->nama}}</th></tr></thead><tbody><tr><td>Alamat</td><td>: {{$data->alamat}}</td></tr><tr><td>No. Telpon</td><td>: {{$data->no_telpon}}</td></tr></tbody></table>';
     // // menampilkan marker
     L.marker([<?=$data->latitude?>, <?=$data->longitude?>])
-    .addTo(mymap)
+    .addTo(mymap);
     // menampilkan popup
     // .bindPopup(info);
     @endforeach

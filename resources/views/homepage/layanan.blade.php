@@ -19,20 +19,22 @@
         <img src="{{ asset('assets/produk.png') }}" alt="" class="produkimg">
     </div>
 </div>
-    
+
     <div class="layanan" id="layanan">
         <div class="card-group mx-auto">
             <div class="row row-cols-1 row-cols-md-3 mx-auto">
-
+        @foreach ($layanan as $item)
             <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
-                    <img src="{{ asset('assets/tekstil.jfif') }}" class="card-img-top" alt="..." style="">
+                    <img src="{{ Storage::url($item->image) }}" class="card-img-top" alt="..." style="">
                     <div class="card-body">
-                        <h4 class="card-text">Perdagangan Besar Tekstil</h4>
+                        <h4 class="card-text">{{ $item->title }}</h4>
                     </div>
                 </div>
             </div>
-            <div class="col">
+
+        @endforeach
+            {{-- <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/percetakan.jfif') }}" class="card-img-top" alt="..." style="">
                     <div class="card-body">
@@ -79,7 +81,7 @@
                         <h4 class="card-text">Perdagangan Besar Alat Tulis</h4>
                     </div>
                 </div>
-            </div>  
+            </div>
             <div class="col">
                 <div class="card" style="width: 360px; height: 330px;">
                     <img src="{{ asset('assets/alatmusik.jfif') }}" class="card-img-top" alt="..." style="">
@@ -95,9 +97,9 @@
                         <h4 class="card-text">Perdagangan Besar Perhiasan dan Jam</h4>
                     </div>
                 </div>
-            </div> 
-                       
-        </div> 
+            </div> --}}
+
+        </div>
     </div>
 
 

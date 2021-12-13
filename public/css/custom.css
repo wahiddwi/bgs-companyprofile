@@ -46,11 +46,11 @@ body {
 }
 .hero img {
     margin-top: 71px;
-    max-height: 422px;
-    margin-left: 222px;
+    max-height: 350px;
+    margin-left: 150px;
 }
 .hero .produkimg {
-    max-height: 380px;
+    max-height: 320px;
 }
 .mid {
     text-align: center;
@@ -162,8 +162,8 @@ footer .nav-item {
 }
 .visi .frame {
     position: relative;
-    max-height: 350px;
-    margin-left: 800px;
+    max-height: 300px;
+    margin-left: 700px;
     margin-top: -500px;
     filter: drop-shadow(0px 11px 19px rgba(0, 0, 0, 0.22));
 }
